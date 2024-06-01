@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameFrameX.Web.Api", "GameFrameX.Web.Api\GameFrameX.Web.Api.csproj", "{ACCFB2AA-174D-48D5-ACB8-4D591FFC2716}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameFrameX.Client.Api", "GameFrameX.Client.Api\GameFrameX.Client.Api.csproj", "{ACCFB2AA-174D-48D5-ACB8-4D591FFC2716}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameFrameX.Application.Client.Api", "GameFrameX.Application.Client.Api\GameFrameX.Application.Client.Api.csproj", "{FF0CBE11-3286-41DD-9E7E-7F8D50987BB1}"
 EndProject
