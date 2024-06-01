@@ -102,6 +102,7 @@ public class GameGlobalInfoController : BaseController<ClientGlobalInfo>
         response.Content = gameGlobalInfo.Content;
         response.CheckAppVersionUrl = gameGlobalInfo.CheckAppVersionUrl;
         response.CheckResourceVersionUrl = gameGlobalInfo.CheckResourceUrl;
+        response.AotCodeList = gameGlobalInfo.AotCodeList;
         return ResultModel.Create(JsonConvert.SerializeObject(response));
     }
 }

@@ -69,6 +69,13 @@ public class ClientGlobalInfo : EntityBase
     public string Content { get; set; }
 
     /// <summary>
+    /// Aot 代码列表
+    /// </summary>
+    [SugarColumn(ColumnDescription = "Aot 代码列表", Length = 4096)]
+    [MaxLength(4096)]
+    public string AotCodeList { get; set; }
+    
+    /// <summary>
     /// 详细描述
     /// </summary>
     [SugarColumn(ColumnDescription = "详细描述", Length = 512)]
