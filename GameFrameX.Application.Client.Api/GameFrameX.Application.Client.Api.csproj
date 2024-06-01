@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
+        <Nullable>disable</Nullable>
         <LangVersion>11</LangVersion>
         <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
