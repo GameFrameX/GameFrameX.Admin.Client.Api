@@ -15,6 +15,8 @@ RUN dotnet restore "GameFrameX.Client.Api/GameFrameX.Client.Api.csproj"
 COPY . .
 WORKDIR "/src/GameFrameX.Client.Api"
 RUN dotnet build "GameFrameX.Client.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
+# 安装ping工具
+RUN apt-get update && apt-get install -y iputils-ping
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
