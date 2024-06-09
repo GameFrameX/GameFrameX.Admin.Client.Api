@@ -121,7 +121,7 @@ if (app.Environment.IsDevelopment())
     // app.UseSwagger();
     // app.UseSwaggerUI();
 }
-
+app.UseHttpsRedirection();
 app.MapControllers();
 // 设置跨域
 app.UseCors("CorsPolicy");
