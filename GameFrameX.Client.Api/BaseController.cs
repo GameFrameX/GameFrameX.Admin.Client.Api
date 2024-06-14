@@ -1,7 +1,7 @@
 ﻿using GameFrameX.Entity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GameFrameX.Web.Api
+namespace GameFrameX.Client.Api
 {
     /// <summary>
     /// 
@@ -10,6 +10,7 @@ namespace GameFrameX.Web.Api
     [ApiController]
     public class BaseController : Controller
     {
+        
     }
 
     /// <summary>
@@ -21,7 +22,7 @@ namespace GameFrameX.Web.Api
         /// <summary>
         /// 
         /// </summary>
-        protected BaseService<T> PBaseService;
+        protected readonly BaseService<T> PBaseService;
 
         /// <summary>
         /// 

@@ -1,4 +1,4 @@
-﻿namespace GameFrameX.Web.Api
+﻿namespace GameFrameX.Client.Api.Result
 {
     /// <summary>
     /// 消息码常量定义

@@ -9,12 +9,21 @@
 
 using SqlSugar;
 
-namespace GameFrameX.Web.Api.SqlSugar;
-
-public class Repository<T> : SimpleClient<T> where T : class, new()
+namespace GameFrameX.Client.Api.SqlSugar
 {
-    public Repository(ISqlSugarClient db)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class Repository<T> : SimpleClient<T> where T : class, new()
     {
-        base.Context = db;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="db"></param>
+        public Repository(ISqlSugarClient db)
+        {
+            base.Context = db;
+        }
     }
 }

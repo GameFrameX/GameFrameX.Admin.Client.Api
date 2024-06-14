@@ -1,4 +1,4 @@
-﻿namespace GameFrameX.Web.Api
+﻿namespace GameFrameX.Client.Api.Result
 {
     /// <summary>
     /// 消息返回统一结构

@@ -1,8 +1,8 @@
 ﻿using System.Linq.Expressions;
+using GameFrameX.Client.Api.SqlSugar;
 using GameFrameX.Entity;
-using GameFrameX.Web.Api.SqlSugar;
 
-namespace GameFrameX.Web.Api
+namespace GameFrameX.Client.Api
 {
     /// <summary>
     /// 
@@ -17,6 +17,9 @@ namespace GameFrameX.Web.Api
     /// <typeparam name="T"></typeparam>
     public class BaseService<T> : BaseService where T : EntityBase, new()
     {
+        /// <summary>
+        /// 
+        /// </summary>
         protected readonly Repository<T> Repository;
 
         /// <summary>

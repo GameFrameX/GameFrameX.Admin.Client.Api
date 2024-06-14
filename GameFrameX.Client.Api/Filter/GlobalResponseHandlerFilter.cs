@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
 
-namespace GameFrameX.Web.Api.Filter
+namespace GameFrameX.Client.Api.Filter
 {
     /// <summary>
     /// 全局请求响应返回处理

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace GameFrameX.Web.Api.Filter
+namespace GameFrameX.Client.Api.Filter
 {
     /// <summary>
     /// 
