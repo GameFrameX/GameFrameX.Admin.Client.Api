@@ -29,51 +29,72 @@ namespace GameFrameX.Client.Api.Controllers
         {
             var response = new AssetPackageVersionResponse();
 
-            var gameResourceVersion = await PBaseService.GetAsync(m => m.AssetPackageName == request.AssetPackageName &&
-                                                                       m.Platform == request.Platform && m.Package == request.PackageName &&
-                                                                       m.AppVersion == request.AppVersion && m.Language == request.Language &&
-                                                                       m.Channel == request.Channel);
+            var gameResourceVersion = await PBaseService.GetAsync(m =>
+                m.AssetPackageName == request.AssetPackageName
+                && m.Platform == request.Platform
+                && m.Package == request.PackageName
+                && m.AppVersion == request.AppVersion
+                && m.Language == request.Language
+                && m.Channel == request.Channel
+            );
             if (gameResourceVersion == null)
             {
-                gameResourceVersion = await PBaseService.GetAsync(m => m.AssetPackageName == request.AssetPackageName &&
-                                                                       m.Platform == request.Platform && m.Package == request.PackageName && m.AppVersion == request.AppVersion &&
-                                                                       m.Language == request.Language &&
-                                                                       m.Channel == ConstValue.ChannelNameDefault);
+                gameResourceVersion = await PBaseService.GetAsync(m =>
+                    m.AssetPackageName == request.AssetPackageName
+                    && m.Platform == request.Platform
+                    && m.Package == request.PackageName
+                    && m.AppVersion == request.AppVersion
+                    && m.Language == request.Language
+                    && m.Channel == ConstValue.ChannelNameDefault
+                );
             }
 
             if (gameResourceVersion == null)
             {
-                gameResourceVersion = await PBaseService.GetAsync(m => m.AssetPackageName == request.AssetPackageName &&
-                                                                       m.Platform == request.Platform && m.Package == request.PackageName && m.AppVersion == request.AppVersion &&
-                                                                       m.Language == ConstValue.LanguageDefault &&
-                                                                       m.Channel == ConstValue.ChannelNameDefault);
+                gameResourceVersion = await PBaseService.GetAsync(m =>
+                    m.AssetPackageName == request.AssetPackageName
+                    && m.Platform == request.Platform
+                    && m.Package == request.PackageName
+                    && m.AppVersion == request.AppVersion
+                    && m.Language == ConstValue.LanguageDefault
+                    && m.Channel == ConstValue.ChannelNameDefault
+                );
             }
 
             if (gameResourceVersion == null)
             {
-                gameResourceVersion = await PBaseService.GetAsync(m => m.AssetPackageName == request.AssetPackageName &&
-                                                                       m.Platform == request.Platform && m.Package == request.PackageName &&
-                                                                       m.AppVersion == ConstValue.AppVersionDefault &&
-                                                                       m.Language == ConstValue.LanguageDefault &&
-                                                                       m.Channel == ConstValue.ChannelNameDefault);
+                gameResourceVersion = await PBaseService.GetAsync(m =>
+                    m.AssetPackageName == request.AssetPackageName
+                    && m.Platform == request.Platform
+                    && m.Package == request.PackageName
+                    && m.AppVersion == ConstValue.AppVersionDefault
+                    && m.Language == ConstValue.LanguageDefault
+                    && m.Channel == ConstValue.ChannelNameDefault
+                );
             }
 
             if (gameResourceVersion == null)
             {
-                gameResourceVersion = await PBaseService.GetAsync(m => m.AssetPackageName == request.AssetPackageName &&
-                                                                       m.Platform == request.Platform && m.Package == ConstValue.PackageNameDefault &&
-                                                                       m.AppVersion == ConstValue.AppVersionDefault &&
-                                                                       m.Language == ConstValue.LanguageDefault &&
-                                                                       m.Channel == ConstValue.ChannelNameDefault);
+                gameResourceVersion = await PBaseService.GetAsync(m =>
+                    m.AssetPackageName == request.AssetPackageName
+                    && m.Platform == request.Platform
+                    && m.Package == ConstValue.PackageNameDefault
+                    && m.AppVersion == ConstValue.AppVersionDefault
+                    && m.Language == ConstValue.LanguageDefault
+                    && m.Channel == ConstValue.ChannelNameDefault
+                );
             }
 
             if (gameResourceVersion == null)
             {
-                gameResourceVersion = await PBaseService.GetAsync(m => m.AssetPackageName == request.AssetPackageName &&
-                                                                       m.Platform == ConstValue.PlatformDefault && m.Package == ConstValue.PackageNameDefault &&
-                                                                       m.AppVersion == ConstValue.AppVersionDefault &&
-                                                                       m.Language == ConstValue.LanguageDefault &&
-                                                                       m.Channel == ConstValue.ChannelNameDefault);
+                gameResourceVersion = await PBaseService.GetAsync(m =>
+                    m.AssetPackageName == request.AssetPackageName
+                    && m.Platform == ConstValue.PlatformDefault
+                    && m.Package == ConstValue.PackageNameDefault
+                    && m.AppVersion == ConstValue.AppVersionDefault
+                    && m.Language == ConstValue.LanguageDefault
+                    && m.Channel == ConstValue.ChannelNameDefault
+                );
             }
 
             if (gameResourceVersion == null)
