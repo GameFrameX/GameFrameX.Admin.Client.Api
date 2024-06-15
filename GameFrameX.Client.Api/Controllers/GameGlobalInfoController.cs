@@ -32,18 +32,9 @@ namespace GameFrameX.Client.Api.Controllers
                 m.Platform == globalInfoRequest.Platform
                 && m.Package == globalInfoRequest.PackageName
                 && m.Version == globalInfoRequest.AppVersion
-                && m.Language == globalInfoRequest.Language &&
-                m.Channel == globalInfoRequest.Channel);
-
-            /*if (gameGlobalInfo == null)
-            {
-                gameGlobalInfo = await PBaseService.GetAsync(m =>
-                    m.Platform == request.Platform
-                    && m.Package == request.PackageName
-                    && m.Version == request.AppVersion
-                    && m.Language == request.Language &&
-                    m.Channel == request.Channel);
-            }*/
+                && m.Language == globalInfoRequest.Language
+                && m.Channel == globalInfoRequest.Channel
+            );
 
             if (gameGlobalInfo == null)
             {
@@ -51,8 +42,9 @@ namespace GameFrameX.Client.Api.Controllers
                     m.Platform == globalInfoRequest.Platform
                     && m.Package == globalInfoRequest.PackageName
                     && m.Version == globalInfoRequest.AppVersion
-                    && m.Language == globalInfoRequest.Language &&
-                    m.Channel == ConstValue.ChannelNameDefault);
+                    && m.Channel == globalInfoRequest.Channel
+                    && m.Language == ConstValue.LanguageDefault
+                );
             }
 
             if (gameGlobalInfo == null)
@@ -61,8 +53,9 @@ namespace GameFrameX.Client.Api.Controllers
                     m.Platform == globalInfoRequest.Platform
                     && m.Package == globalInfoRequest.PackageName
                     && m.Version == globalInfoRequest.AppVersion
-                    && m.Language == ConstValue.LanguageDefault &&
-                    m.Channel == ConstValue.ChannelNameDefault);
+                    && m.Language == ConstValue.LanguageDefault
+                    && (m.Channel == ConstValue.ChannelNameDefault || m.Channel == globalInfoRequest.Channel)
+                );
             }
 
             if (gameGlobalInfo == null)
@@ -70,9 +63,10 @@ namespace GameFrameX.Client.Api.Controllers
                 gameGlobalInfo = await PBaseService.GetAsync(m =>
                     m.Platform == globalInfoRequest.Platform
                     && m.Package == globalInfoRequest.PackageName
-                    && m.Version == ConstValue.AppVersionDefault &&
-                    m.Language == ConstValue.LanguageDefault &&
-                    m.Channel == ConstValue.ChannelNameDefault);
+                    && m.Version == ConstValue.AppVersionDefault
+                    && m.Language == ConstValue.LanguageDefault
+                    && (m.Channel == ConstValue.ChannelNameDefault || m.Channel == globalInfoRequest.Channel)
+                );
             }
 
             if (gameGlobalInfo == null)
@@ -80,9 +74,10 @@ namespace GameFrameX.Client.Api.Controllers
                 gameGlobalInfo = await PBaseService.GetAsync(m =>
                     m.Platform == globalInfoRequest.Platform
                     && m.Package == ConstValue.PackageNameDefault
-                    && m.Version == ConstValue.AppVersionDefault &&
-                    m.Language == ConstValue.LanguageDefault &&
-                    m.Channel == ConstValue.ChannelNameDefault);
+                    && m.Version == ConstValue.AppVersionDefault
+                    && m.Language == ConstValue.LanguageDefault
+                    && (m.Channel == ConstValue.ChannelNameDefault || m.Channel == globalInfoRequest.Channel)
+                );
             }
 
             if (gameGlobalInfo == null)
@@ -90,9 +85,10 @@ namespace GameFrameX.Client.Api.Controllers
                 gameGlobalInfo = await PBaseService.GetAsync(m =>
                     m.Platform == ConstValue.PlatformDefault
                     && m.Package == ConstValue.PackageNameDefault
-                    && m.Version == ConstValue.AppVersionDefault &&
-                    m.Language == ConstValue.LanguageDefault &&
-                    m.Channel == ConstValue.ChannelNameDefault);
+                    && m.Version == ConstValue.AppVersionDefault
+                    && m.Language == ConstValue.LanguageDefault
+                    && (m.Channel == ConstValue.ChannelNameDefault || m.Channel == globalInfoRequest.Channel)
+                );
             }
 
             if (gameGlobalInfo == null)
