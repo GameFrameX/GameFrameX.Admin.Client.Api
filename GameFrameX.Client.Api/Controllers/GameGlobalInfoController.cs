@@ -25,7 +25,7 @@ namespace GameFrameX.Client.Api.Controllers
         /// <returns></returns>
         [ProducesResponseType(typeof(GlobalInfoResponse), 200)]
         [HttpPost]
-        public async Task<ResultModel> GetInfo([FromBody] GlobalInfoRequest globalInfoRequest)
+        public async Task<HttpResult> GetInfo([FromBody] GlobalInfoRequest globalInfoRequest)
         {
             var response = new GlobalInfoResponse();
             ClientGlobalInfo gameGlobalInfo = await PBaseService.GetAsync(m =>
@@ -93,14 +93,14 @@ namespace GameFrameX.Client.Api.Controllers
 
             if (gameGlobalInfo == null)
             {
-                return ResultModel.Create(ResultCode.NotFound, "not found");
+                return HttpResult.Create(HttpStatusCode.NotFound, "not found");
             }
 
             response.Content = gameGlobalInfo.Content;
             response.CheckAppVersionUrl = gameGlobalInfo.CheckAppVersionUrl;
             response.CheckResourceVersionUrl = gameGlobalInfo.CheckResourceUrl;
             response.AotCodeList = gameGlobalInfo.AotCodeList;
-            return ResultModel.Create(JsonConvert.SerializeObject(response));
+            return HttpResult.Create(JsonConvert.SerializeObject(response));
         }
     }
 }

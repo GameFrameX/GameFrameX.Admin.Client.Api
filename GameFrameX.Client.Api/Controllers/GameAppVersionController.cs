@@ -25,7 +25,7 @@ namespace GameFrameX.Client.Api.Controllers
         /// <returns></returns>
         [ProducesResponseType(typeof(GameAppVersionResponse), 200)]
         [HttpPost]
-        public async Task<ResultModel> GetInfo([FromBody] GameAppVersionRequest gameAppVersionRequest)
+        public async Task<HttpResult> GetInfo([FromBody] GameAppVersionRequest gameAppVersionRequest)
         {
             var response = new GameAppVersionResponse();
             ClientAppVersion gameAppVersion = await PBaseService.GetAsync(m =>
@@ -81,7 +81,7 @@ namespace GameFrameX.Client.Api.Controllers
 
             if (gameAppVersion == null)
             {
-                return ResultModel.Create(ResultCode.NotFound, "not found");
+                return HttpResult.Create(HttpStatusCode.NotFound, "not found");
             }
 
             response.IsForce = gameAppVersion.IsForce;
@@ -89,7 +89,7 @@ namespace GameFrameX.Client.Api.Controllers
             response.UpdateAnnouncement = gameAppVersion.Announcement;
             response.AppDownloadUrl = gameAppVersion.DownloadUrl;
 
-            return ResultModel.Create(JsonConvert.SerializeObject(response));
+            return HttpResult.Create(JsonConvert.SerializeObject(response));
         }
     }
 }

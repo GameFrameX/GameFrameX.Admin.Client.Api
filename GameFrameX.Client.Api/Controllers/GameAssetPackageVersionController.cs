@@ -25,7 +25,7 @@ namespace GameFrameX.Client.Api.Controllers
         /// <returns></returns>
         [ProducesResponseType(typeof(AssetPackageVersionResponse), 200)]
         [HttpPost]
-        public async Task<ResultModel> GetInfo([FromBody] AssetPackageVersionRequest request)
+        public async Task<HttpResult> GetInfo([FromBody] AssetPackageVersionRequest request)
         {
             var response = new AssetPackageVersionResponse();
 
@@ -99,7 +99,7 @@ namespace GameFrameX.Client.Api.Controllers
 
             if (gameResourceVersion == null)
             {
-                return ResultModel.Create(ResultCode.NotFound, "not found");
+                return HttpResult.Create(HttpStatusCode.NotFound, "not found");
             }
 
             response.Language = gameResourceVersion.Language;
@@ -111,7 +111,7 @@ namespace GameFrameX.Client.Api.Controllers
             response.PackageName = gameResourceVersion.Package;
             response.AppVersion = gameResourceVersion.AppVersion;
 
-            return ResultModel.Create(JsonConvert.SerializeObject(response));
+            return HttpResult.Create(JsonConvert.SerializeObject(response));
         }
     }
 }
