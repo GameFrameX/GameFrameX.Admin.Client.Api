@@ -16,45 +16,8 @@ namespace GameFrameX.Entity;
 public abstract class EntityBase : EntityBaseId, IDeletedFilter
 {
     /// <summary>
-    /// 创建时间
-    /// </summary>
-    [SugarColumn(ColumnDescription = "创建时间", IsOnlyIgnoreUpdate = true)]
-    public virtual DateTime? CreateTime { get; set; }
-
-    /// <summary>
-    /// 更新时间
-    /// </summary>
-    [SugarColumn(ColumnDescription = "更新时间", IsOnlyIgnoreInsert = true)]
-    public virtual DateTime? UpdateTime { get; set; }
-
-    /// <summary>
-    /// 创建者Id
-    /// </summary>
-    [SugarColumn(ColumnDescription = "创建者Id", IsOnlyIgnoreUpdate = true)]
-    public virtual long? CreateUserId { get; set; }
-
-
-    /// <summary>
-    /// 创建者姓名
-    /// </summary>
-    [SugarColumn(ColumnDescription = "创建者姓名", Length = 64, IsOnlyIgnoreUpdate = true)]
-    public virtual string? CreateUserName { get; set; }
-
-    /// <summary>
-    /// 修改者Id
-    /// </summary>
-    [SugarColumn(ColumnDescription = "修改者Id", IsOnlyIgnoreInsert = true)]
-    public virtual long? UpdateUserId { get; set; }
-
-    /// <summary>
-    /// 修改者姓名
-    /// </summary>
-    [SugarColumn(ColumnDescription = "修改者姓名", Length = 64, IsOnlyIgnoreInsert = true)]
-    public virtual string? UpdateUserName { get; set; }
-
-    /// <summary>
     /// 软删除
     /// </summary>
     [SugarColumn(ColumnDescription = "软删除")]
-    public virtual bool IsDelete { get; set; } = false;
+    public bool IsDelete { get; set; } = false;
 }

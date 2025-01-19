@@ -26,5 +26,5 @@ public abstract class EntityBaseSelect : EntityBase, ISelectFilter
     /// </summary>
     [SugarColumn(ColumnDescription = "详细描述", Length = 512)]
     [MaxLength(512)]
-    public string? Description { get; set; }
+    public string Description { get; set; }
 }
