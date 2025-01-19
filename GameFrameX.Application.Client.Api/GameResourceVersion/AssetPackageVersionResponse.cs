@@ -3,7 +3,7 @@ namespace GameFrameX.Application.Client.Api.GameResourceVersion;
 /// <summary>
 /// 
 /// </summary>
-public class AssetPackageVersionResponse
+public sealed class AssetPackageVersionResponse
 {
     /// <summary>
     /// 语言

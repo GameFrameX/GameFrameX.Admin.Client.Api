@@ -5,7 +5,7 @@ namespace GameFrameX.Application.Client.Api.GameResourceVersion;
 /// <summary>
 /// 
 /// </summary>
-public class AssetPackageVersionRequest
+public sealed class AssetPackageVersionRequest
 {
     /// <summary>
     /// 语言

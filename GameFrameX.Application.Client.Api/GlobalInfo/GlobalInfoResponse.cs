@@ -1,9 +1,9 @@
-namespace GameFrameX.Application.Api.GameApplicationVersion;
+namespace GameFrameX.Application.Client.Api.GlobalInfo;
 
 /// <summary>
 /// 
 /// </summary>
-public class GlobalInfoResponse
+public sealed class GlobalInfoResponse
 {
     /// <summary>
     /// 检测程序版本地址

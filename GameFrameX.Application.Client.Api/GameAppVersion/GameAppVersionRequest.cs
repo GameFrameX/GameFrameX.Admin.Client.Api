@@ -1,11 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace GameFrameX.Application.Api.GameApplicationVersion;
+namespace GameFrameX.Application.Client.Api.GameAppVersion;
 
 /// <summary>
 /// 
 /// </summary>
-public class GameAppVersionRequest
+public sealed class GameAppVersionRequest
 {
     /// <summary>
     /// 语言

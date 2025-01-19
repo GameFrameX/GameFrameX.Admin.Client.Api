@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace GameFrameX.Application.Api.GameApplicationVersion;
+namespace GameFrameX.Application.Client.Api.GlobalInfo;
 
 /// <summary>
 /// 

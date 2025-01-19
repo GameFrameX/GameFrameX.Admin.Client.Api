@@ -1,9 +1,9 @@
-namespace GameFrameX.Application.Api.GameApplicationVersion;
+namespace GameFrameX.Application.Client.Api.GameAppVersion;
 
 /// <summary>
 /// 
 /// </summary>
-public class GameAppVersionResponse
+public sealed class GameAppVersionResponse
 {
     /// <summary>
     /// 是否强制升级
